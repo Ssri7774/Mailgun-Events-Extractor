@@ -23,7 +23,7 @@ This Python script extracts email events data from the Mailgun API for a specifi
    git clone <repository-url>
    cd <repository-directory>
 2. **Install required packages (if any):**
-   Ensure you have the necessary Python libraries installed. You can create a virtual environment and install any required packages. If you're using only built-in libraries (like json, csv, etc.), no additional installation is needed.
+   Ensure you have the necessary Python libraries installed. You can create a virtual environment and install any required packages. If you're using only built-in libraries (like `json`, `csv`, etc.), no additional installation is needed.
 
 
 ## Usage
@@ -34,7 +34,7 @@ python3 mailgun_events_extractor.py
 ```
 2. Follow the prompts to enter:
   - Your Mailgun API key (input is hidden for security).
-  - Your Mailgun domain (e.g., mg.yourdomain.com).
+  - Your Mailgun domain (e.g., `mg.yourdomain.com`).
   - Start and end epoch times for the events you want to retrieve.
 
   ### Converting Epoch Time
@@ -52,27 +52,27 @@ python3 mailgun_events_extractor.py
     ```
 
 3. After retrieving the events, the script will:
- - Save the raw JSON output to a file named {domain}-report.json.
+ - Save the raw JSON output to a file named `{domain}-report.json`.
  - Ask if you want to filter the events by subject.\
  - If filtering is chosen, enter the desired subject.
- - Save the filtered results to {domain}-filtered-report.json.
+ - Save the filtered results to `{domain}-filtered-report.json`.
 
 4. You will then be prompted to convert the JSON data to CSV format:
   - Choose to use either the raw or filtered data.
-  - The CSV file will be saved as {domain}-report.csv or {domain}-filtered-report.csv.
+  - The CSV file will be saved as `{domain}-report.csv` or `{domain}-filtered-report.csv`.
 
 ## Example
 ```
 Enter your Mailgun API key: 
-Enter your Mailgun domain (e.g., mg.yourdomain.com): mg.lionheartfundingprogram.com
+Enter your Mailgun domain (e.g., mg.yourdomain.com): mg.yourdomain.com
 Enter the start epoch time (e.g., 1729017600): 1729017600
 Enter the end epoch time (e.g., 1734431999): 1734431999
 ```
 
 ## Output
-- Raw events data will be saved to mg.lionheartfundingprogram.com-report.json.
-- Filtered results will be saved to mg.lionheartfundingprogram.com-filtered-report.json if filtering is applied.
-- CSV files will be saved as mg.lionheartfundingprogram.com-report.csv or mg.lionheartfundingprogram.com-filtered-report.csv.
+- Raw events data will be saved to `mg.yourdomain.com-report.json`.
+- Filtered results will be saved to `mg.yourdomain.com-filtered-report.json` if filtering is applied.
+- CSV files will be saved as `mg.yourdomain.com-report.csv` or `mg.yourdomain.com-filtered-report.csv`.
 
 ## Notes
 - Ensure that the epoch time format is correct and that the time range covers the events you wish to retrieve.
